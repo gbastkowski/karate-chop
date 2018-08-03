@@ -10,10 +10,14 @@ class BinarySearch(array: Array[Int]) {
   private[this] def chop(value: Int, from: Int, to: Int): Int = {
     val splitAt = from + ((to - from) / 2)
 
-    if (to - from <= 1 && value != array(splitAt)) BinarySearch.NOT_FOUND
-    else if (value < array(splitAt))  chop(value, from, splitAt)
-    else if (value > array(splitAt))  chop(value, splitAt, to)
-    else /* value ==array(splitAt) */ splitAt
+    val notFound = to - from <= 1 && value != array(splitAt)
+    val inLeftHalf = value < array(splitAt)
+    val inRightHalf = value > array(splitAt)
+
+    if      (notFound)    BinarySearch.NOT_FOUND
+    else if (inLeftHalf)  chop(value, from, splitAt)
+    else if (inRightHalf) chop(value, splitAt, to)
+    else /* found :→ */   splitAt
   }
 
 }
