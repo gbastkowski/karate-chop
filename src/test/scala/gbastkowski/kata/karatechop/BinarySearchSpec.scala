@@ -28,37 +28,37 @@ class BinarySearchSpec extends FreeSpec with Matchers {
         chop(3, array) shouldBe 1
       }
 
-      // "should answer 2 if value is the third element" in {
-      //   chop(5, array) shouldBe 2
-      // }
+      "should answer 2 if value is the third element" in {
+        chop(5, array) shouldBe 2
+      }
 
-      // "should answer -1 if value is not in the array" in {
-      //   chop(0, array) shouldBe -1
-      // }
+      "should answer -1 if value is not in the array" in {
+        chop(0, array) shouldBe -1
+      }
     }
 
     "with an Array(1, 3, 5, 7)" - {
       val array = Array(1, 3, 5, 7)
 
-      // "should answer 1 if value is 3" in {
-      //   chop(3, array) shouldBe 1
-      // }
+      "should answer 1 if value is 3" in {
+        chop(3, array) shouldBe 1
+      }
 
-      // "should answer 2 if value is 5" in {
-      //   chop(5, array) shouldBe 2
-      // }
+      "should answer 2 if value is 5" in {
+        chop(5, array) shouldBe 2
+      }
 
-      // "should answer -1 if value is 2" in {
-      //   chop(2, array) shouldBe -1
-      // }
+      "should answer -1 if value is 2" in {
+        chop(2, array) shouldBe -1
+      }
 
-      // "should answer -1 if value is 4" in {
-      //   chop(4, array) shouldBe -1
-      // }
+      "should answer -1 if value is 4" in {
+        chop(4, array) shouldBe -1
+      }
 
-      // "should answer -1 if value is 6" in {
-      //   chop(6, array) shouldBe -1
-      // }
+      "should answer -1 if value is 6" in {
+        chop(6, array) shouldBe -1
+      }
     }
   }
 
